@@ -4,6 +4,9 @@ def load_library(path)
   data = YAML.load_file(path)
   database = {'get_meaning' => {}, 'get_emoticon' => {}}
   
+  data.each_key do |key|
+    database['get_meaning'][data[key][1]] = "#{key}"
+  end
   return database
 end
 
