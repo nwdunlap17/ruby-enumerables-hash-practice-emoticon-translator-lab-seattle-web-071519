@@ -2,7 +2,7 @@ require 'yaml'
   
 def load_library(path)
   data = YAML.load_file(path)
-  database = {'get_meaning' => {}, 'get_emoticon' +> {}}
+  database = {'get_meaning' => {}, 'get_emoticon' => {}}
   
   return database
 end
