@@ -13,7 +13,10 @@ end
 
 def get_japanese_emoticon(path,face)
   database = load_library(path)
-  return database['get_emoticon'][face]
+  if database['get_emoticon'][face] != NIL
+    return database['get_emoticon'][face]
+  end
+  return 
 end
 
 def get_english_meaning(path,face)
