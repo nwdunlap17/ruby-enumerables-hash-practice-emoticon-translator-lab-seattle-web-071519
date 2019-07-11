@@ -23,7 +23,7 @@ def get_english_meaning(face)
   end
 end
 
-data = load_library
+data = load_library('lib/translator.rb')
 foo = get_japanese_emoticon("O:)")
 p foo
 p get_english_meaning(foo)
