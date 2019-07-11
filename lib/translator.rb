@@ -16,7 +16,7 @@ def get_japanese_emoticon(path,face)
   if database['get_emoticon'][face] != NIL
     return database['get_emoticon'][face]
   end
-  return 
+  return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(path,face)
