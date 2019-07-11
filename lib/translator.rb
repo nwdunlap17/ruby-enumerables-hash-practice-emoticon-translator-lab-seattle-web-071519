@@ -6,6 +6,7 @@ def load_library(path)
   
   data.each_key do |key|
     database['get_meaning'][data[key][1]] = "#{key}"
+    database['get_emoticon'][data[key][0]] = data[key][1]
   end
   return database
 end
