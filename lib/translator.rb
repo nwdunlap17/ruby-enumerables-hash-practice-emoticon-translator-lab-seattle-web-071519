@@ -1,13 +1,28 @@
-# require modules here
-
-def load_library
-  # code goes here
+require 'yaml'
+  
+def load_library(path)
+  data = YAML.load_file(path)
+  database = {'get_meaning' => {}, 'get_emoticon' => {}}
+  
+  data.each_key do |key|
+    database['get_meaning'][data[key][1]] = "#{key}"
+    database['get_emoticon'][data[key][0]] = data[key][1]
+  end
+  return database
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(path,face)
+  database = load_library(path)
+  if database['get_emoticon'][face] != NIL
+    return database['get_emoticon'][face]
+  end
+  return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(path,face)
+  database = load_library(path)
+  if database['get_meaning'][face] != NIL
+    return database['get_meaning'][face]
+  end
+  return "Sorry, that emoticon was not found"
 end
