@@ -8,7 +8,7 @@ end
 def get_japanese_emoticon(face)
   database = load_library
   database.each do |key,value|
-    p obj
+    p database[key][1]
   end
 end
 
