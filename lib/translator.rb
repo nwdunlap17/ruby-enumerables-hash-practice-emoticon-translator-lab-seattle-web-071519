@@ -17,4 +17,4 @@ def get_english_meaning(face)
 end
 
 data = load_library
-get_japanese_emoticon("O:)",data)
+get_japanese_emoticon("O:)")
