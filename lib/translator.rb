@@ -20,10 +20,4 @@ def get_japanese_emoticon(path,face)
 end
 
 def get_english_meaning(path,face)
-  database = load_library(path)
-  database.each_key do |key|
-    if database[key][1] == face
-      return key
-    end
-  end
 end
