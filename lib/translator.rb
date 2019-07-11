@@ -2,15 +2,19 @@ require 'yaml'
   
 def load_library
   database = YAML.load_file('emoticons.yml')
-  p database
+  return database
 end
 
 def get_japanese_emoticon(face)
-  # code goes here
+  database = load_library
+  database.each do |obj|
+    p obj
+  end
 end
 
 def get_english_meaning(face)
   # code goes here
 end
 
-load_library
+data = load_library
+get_japanese_emoticon("O:)",data)
