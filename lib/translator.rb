@@ -20,4 +20,9 @@ def get_japanese_emoticon(path,face)
 end
 
 def get_english_meaning(path,face)
+  database = load_library(path)
+  if database['get_meaning'][face] != NIL
+    return database['get_meaning'][face]
+  end
+  return "Sorry, that emoticon was not found"
 end
