@@ -1,7 +1,7 @@
 require 'yaml'
   
-def load_library
-  database = YAML.load_file('lib/emoticons.yml')
+def load_library(path)
+  database = YAML.load_file(path)
   return database
 end
 
